@@ -15,5 +15,6 @@ def binary_search(arr, item_to_find) #on ordered list
       high = mid - 1
     end
   end
+  nil #returns nil if item is not found
 end
 puts binary_search(arr, 9)
