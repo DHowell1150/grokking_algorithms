@@ -17,6 +17,3 @@ def binary_search(arr, item_to_find) #on ordered list
   end
 end
 puts binary_search(arr, 9)
-
-
-#My question is why can't we use something more simple like .max?
