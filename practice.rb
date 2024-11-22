@@ -1,16 +1,15 @@
 require "pry"
 lst = [1, -2, 3, 4, -5, 6, 7, 8, 9, 10]
-# def count_positives_sum_negatives(lst)
-#   return [] if lst == []
-#   pos = 0
-#   neg = []
-#   lst.each do |e|
-#     pos += 1 if e > 0 
-#     neg << e if e < 0
-#   end
-#   [pos, neg.sum]
-# end
-
+def count_positives_sum_negatives(lst)
+  return [] if lst == []
+  pos = 0
+  neg = []
+  lst.each do |e|
+    pos += 1 if e > 0 
+    neg << e if e < 0
+  end
+  [pos, neg.sum]
+end
 # puts count_positives_sum_negatives(lst)
 
 
@@ -23,18 +22,17 @@ def count_positives_sum_negatives(lst)
     result
   end
 end
-
-puts count_positives_sum_negatives(lst)
+# puts count_positives_sum_negatives(lst)
 
 
 
 #Build without using an enumerator.  Should be a one line method
-# arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# def filter_odds(arr)
-#   require 'pry' ; binding.pry
-# end
-# puts filter_odds(arr)
+def filter_odds(arr)
+  arr - (1...arr.length).step(2).to_a # this only works if it's a sorted, consistent-range array
+end
+puts filter_odds(arr)
 
 # arr.select { |e| e.even? }  # This uses enumerator
 # arr - (1..10).step(2).to_a # This is not dynamic enough to put in a method.  Only considers said range.
