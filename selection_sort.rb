@@ -4,6 +4,19 @@ arr = [5, 2, 9, 6, 3, 1]
 
 # start by defining the smallest value at indices 0 then iterate over each indices to evaluate if it is less than the currently defined value.  
 # => smallest value
+def find_smallest(arr)
+  smallest = arr[0]
+  smallest_index = 0
+  (1...arr.length - 1).each do |i|
+    if arr[i] < smallest
+      smallest = arr[i] 
+      smallest_index = i
+    end
+    require 'pry' ; binding.pry
+  end
+end
+puts find_smallest(arr)
+
 
 def find_smallest(arr)
   smallest = arr[0]
@@ -16,7 +29,7 @@ def find_smallest(arr)
   end
   smallest_index
 end
-puts find_smallest(arr)
+# puts find_smallest(arr)
 
 
 
@@ -29,4 +42,4 @@ def selection_sort(arr)
   end
   new_arr
 end
-puts selection_sort(arr)
+# puts selection_sort(arr)
